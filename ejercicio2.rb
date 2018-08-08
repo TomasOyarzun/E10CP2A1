@@ -3,12 +3,13 @@ module Formula
 		(lado1 + lado2) * 2
 	end
 
-	def area(base, altura)
-		base * altura
+	def area(lado1, lado2)
+		lado1 * lado2
 	end
 end
 
 class Rectangulo
+  #Mixing
 	include Formula
   def initialize(base, altura)
     @base = base
@@ -21,6 +22,7 @@ class Rectangulo
 end
 
 class Cuadrado
+  #Mixing
 	include Formula
   def initialize(lado)
     @lado = lado
@@ -31,7 +33,9 @@ class Cuadrado
   end
 end
 
-square = Cuadrado.new(4)
-rectangle = Rectangulo.new(10, 5)
+#Test
+puts square = Cuadrado.new(4).perimetro(4,4)
+puts rectangle = Rectangulo.new(10, 5).area(10, 5)
+
 
 
